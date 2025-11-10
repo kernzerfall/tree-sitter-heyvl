@@ -119,7 +119,7 @@
   name: (identifier) @function)
 
 ;; Function calls
-(_call_expression
+(call_expression
   function: (identifier) @function.call)
 
 ;; Parameters

@@ -587,7 +587,7 @@
     },
     "call_statement": {
       "type": "SYMBOL",
-      "name": "_call_expression"
+      "name": "call_expression"
     },
     "havoc_statement": {
       "type": "SEQ",
@@ -1047,7 +1047,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_call_expression"
+          "name": "call_expression"
         },
         {
           "type": "SYMBOL",
@@ -1497,7 +1497,7 @@
         }
       ]
     },
-    "_call_expression": {
+    "call_expression": {
       "type": "SEQ",
       "members": [
         {

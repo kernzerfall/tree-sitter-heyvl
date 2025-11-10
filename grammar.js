@@ -145,7 +145,7 @@ module.exports = grammar({
     ),
     
     // A call expression used as a statement
-    call_statement: $=>$._call_expression,
+    call_statement: $=>$.call_expression,
 
     havoc_statement: $ => seq(
       choice('havoc', 'cohavoc'),
@@ -210,7 +210,7 @@ module.exports = grammar({
       $.unary_expression,
       $.let_expression,
       $.ite_expression,
-      $._call_expression,
+      $.call_expression,
       $.iverson_expression,
       $.parenthesized_expression,
       $.literal,
@@ -259,7 +259,7 @@ module.exports = grammar({
     ite_expression: $ => seq(
       'ite', '(', $._expression, ',', $._expression, ',', $._expression, ')'
     ),
-    _call_expression: $ => seq(
+    call_expression: $ => seq(
       field('function', $.identifier),
       '(',
       commaSep($._expression),
