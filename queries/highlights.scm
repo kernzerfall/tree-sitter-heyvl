@@ -112,6 +112,10 @@
 
 ;; --- Functions and Variables ---
 
+;; Axioms
+(axiom_declaration
+  name: (identifier) @property)
+
 ;; Procedure/Function Definitions
 (proc_declaration
   name: (identifier) @function)
@@ -131,6 +135,14 @@
 ;; Variable definitions
 (variable_declaration_statement
   name: (identifier) @variable)
+
+;; Let variables
+(let_expression
+  name: (identifier) @variable.local)
+
+;; Labels
+(label_statement
+  (identifier) @label)
 
 ;; --- Declarations and Scopes ---
 (domain_declaration
