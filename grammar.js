@@ -254,10 +254,16 @@ module.exports = grammar({
     )),
 
     let_expression: $ => seq(
-      'let', '(', $.identifier, ',', $._expression, ',', $._expression, ')'
+      'let', '(',
+      field('name', $.identifier), ',',
+      field('value', $._expression), ',',
+      field('body', $._expression), ')'
     ),
     ite_expression: $ => seq(
-      'ite', '(', $._expression, ',', $._expression, ',', $._expression, ')'
+      'ite', '(',
+      field('condition', $._expression), ',',
+      field('then', $._expression), ',',
+      field('else', $._expression), ')'
     ),
     call_expression: $ => seq(
       field('function', $.identifier),
