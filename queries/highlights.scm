@@ -154,9 +154,12 @@
   name: (identifier) @namespace)
 
 ;; --- Annotations ---
+;; --- Annotations ---
 (annotation_calculus
+  "@" @tag
   (identifier) @tag)
 (annotated_statement
+  "@" @tag
   name: (identifier) @tag)
 (quantifier_annotation
   "@trigger" @tag)
