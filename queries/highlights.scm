@@ -106,6 +106,11 @@
   "[]"
 ] @operator
 
+;; Iverson brackets
+(iverson_expression
+  "[" @operator
+  "]" @operator)
+
 ;; --- Types ---
 (type_identifier) @type
 (list_type "[]") @type.builtin ; Highlight the '[]' part of a list type
